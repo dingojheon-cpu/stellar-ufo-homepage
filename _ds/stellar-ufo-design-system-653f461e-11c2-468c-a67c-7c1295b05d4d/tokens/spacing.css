@@ -1,0 +1,32 @@
+/* Stellar UFO — Spacing & radii tokens
+ * Generous whitespace, soft pill/dome rounding. The brand reads "rounded dome",
+ * so radii run large; CTAs are fully pill-shaped.
+ */
+:root {
+  /* ---- Spacing scale (4px base) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 22px;
+  --space-6: 28px;
+  --space-7: 34px;
+  --space-8: 44px;
+  --space-9: 56px;
+  --space-10: 72px;
+  --space-11: 96px;
+
+  /* ---- Section rhythm ---- */
+  --section-pad-y: 96px;
+  --section-pad-y-sm: 70px;
+  --gutter: 22px;
+  --page-max: 1180px;
+
+  /* ---- Radii (rounded dome language) ---- */
+  --radius-sm: 12px;
+  --radius-md: 22px;   /* cards */
+  --radius-lg: 24px;   /* steps / tiles */
+  --radius-xl: 34px;   /* hero visuals / large panels */
+  --radius-pill: 999px; /* buttons, eyebrows, capsules */
+  --radius-dome: 42px;  /* claw / dome corner */
+}

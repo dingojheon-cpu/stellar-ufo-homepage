@@ -1,0 +1,53 @@
+/* Stellar UFO — Color tokens
+ * Source of truth: 01_브랜드로고/ACTIVE_BRAND_SYSTEM.md
+ * A friendly, soft-futuristic palette: ivory paper, navy "deep space",
+ * coral saucer CTAs, mint mascot, with yellow used only as a small reward pop.
+ */
+:root {
+  /* ---- Brand base palette ---- */
+  --ivory: #FAFAEF;        /* Ivory Space  — default paper / background */
+  --coral: #FA7873;        /* Coral Saucer — primary CTA / highlight */
+  --mint: #5FC9B5;         /* Alien Mint   — mascot / friendly accent */
+  --navy: #0A2142;         /* Deep Space Navy — text / premium contrast */
+  --yellow: #FAD85E;       /* Solar Yellow — reward pop (small areas only) */
+  --teal: #3C6167;         /* Orbit Teal Shadow — outline / secondary text */
+  --glass: #C1E0EB;        /* Glass Blue   — dome / panels / dividers */
+  --soft-coral: #F0B1AB;   /* Soft Coral   — light event background */
+  --gray: #7B7673;         /* Neutral Gray — sub text / legal footers */
+  --white: #FFFDF6;        /* warm white   — cards on ivory */
+
+  /* ---- Tints / derived steps ---- */
+  --navy-900: #07182F;     /* deepest space — gradient floor */
+  --navy-700: #11385D;     /* lifted navy — gradient ceiling */
+  --ivory-paper: #F7F0DE;  /* warmer ivory for gradient washes */
+  --coral-soft: #FDEDEC;   /* coral 8% — soft fills */
+  --mint-soft: #E3F5F0;    /* mint 12% — soft fills */
+  --glass-soft: #ECF6FA;   /* glass 30% — soft fills */
+  --yellow-soft: #FEF6D8;  /* yellow 18% — reward fills */
+
+  /* ---- Semantic aliases ---- */
+  --surface-page: var(--ivory);
+  --surface-card: var(--white);
+  --surface-sunken: var(--ivory-paper);
+  --surface-dark: var(--navy);
+  --surface-glass: rgba(255, 255, 255, 0.64);
+
+  --text-primary: var(--navy);
+  --text-secondary: rgba(10, 33, 66, 0.74);
+  --text-muted: var(--gray);
+  --text-on-dark: var(--ivory);
+  --text-on-dark-muted: rgba(250, 250, 239, 0.74);
+  --text-link: var(--coral);
+
+  --border-subtle: rgba(10, 33, 66, 0.10);
+  --border-strong: rgba(10, 33, 66, 0.14);
+  --border-on-dark: rgba(250, 250, 239, 0.14);
+  --divider-glass: var(--glass);
+
+  --accent-primary: var(--coral);     /* CTA, important highlights */
+  --accent-friendly: var(--mint);     /* mascot, category markers */
+  --accent-reward: var(--yellow);     /* small reward / prize pops */
+  --accent-cool: var(--glass);        /* glass / light reflection */
+
+  --focus-ring: rgba(250, 120, 115, 0.45);
+}
