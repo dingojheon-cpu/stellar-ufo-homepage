@@ -6,6 +6,8 @@ const DSf = window.StellarUFODesignSystem_653f46;
 
 const MOD_CHIPS = ["인형뽑기(Play)", "가챠·캡슐토이", "캐릭터 굿즈·MD", "포토부스", "샵인샵", "아직 미정"];
 
+const CONSULT_ENDPOINT = "https://script.google.com/macros/s/AKfycbxfQ5E5My5X0Mhr5H_8oaD4pS7AM-TRmFMUhcNsxMsNIrWe3LwsrMKv7JYCRYsBJ38AiQ/exec";
+
 function SurveySection() {
   const { Input, Select, Textarea, Button } = DSf;
   const [picked, setPicked] = useState([]);
@@ -26,6 +28,26 @@ function SurveySection() {
       return;
     }
     setErr("");
+
+    const spaceType = f.querySelector('[id="s-입점-공간-형태"]');
+    const purpose = f.querySelector('[id="s-협력-목적"]');
+    const message = f.querySelector('[id="t-가장-걱정되는-부분-/-추가-문의"]');
+
+    const payload = {
+      name: name.value.trim(),
+      tel: tel.value.trim(),
+      spaceType: spaceType ? spaceType.value : "",
+      purpose: purpose ? purpose.value : "",
+      modules: picked,
+      message: message ? message.value : "",
+    };
+
+    fetch(CONSULT_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload),
+    }).catch(() => {});
+
     setSent(true);
   };
 
